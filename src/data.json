@@ -1,0 +1,264 @@
+{
+  "data": {
+    "product": {
+      "title": "Resident Evil Village Pre-order (PC)",
+      "media": {
+        "edges": [
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210280616",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/VILLAGE_keyart_20300ppi_634afb07-1355-4d67-8401-4137907c28ae.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995471016",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/VILLAGE_keyart_20300ppi_634afb07-1355-4d67-8401-4137907c28ae.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210575528",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/18_74e7d974-387c-4850-8ae3-16fc08bb1d25.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995765928",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/18_74e7d974-387c-4850-8ae3-16fc08bb1d25.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210313384",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/15_23191630-dbb4-4e2e-a9be-2acb3d7e828c.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995503784",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/15_23191630-dbb4-4e2e-a9be-2acb3d7e828c.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210346152",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/17_49ce3085-ed73-47eb-a7dc-7b1a5561929f.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995536552",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/17_49ce3085-ed73-47eb-a7dc-7b1a5561929f.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210378920",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/23_e753dc32-36b5-4889-8695-1b804fc6396b.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995569320",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/23_e753dc32-36b5-4889-8695-1b804fc6396b.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210411688",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/13_1f8a6e91-5861-4228-83ff-6a10e0bf68ad.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995602088",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/13_1f8a6e91-5861-4228-83ff-6a10e0bf68ad.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210444456",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/00_ec0edb16-36d9-4f5a-a6aa-cda91f2c0ed6.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995634856",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/00_ec0edb16-36d9-4f5a-a6aa-cda91f2c0ed6.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210477224",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/09_f7ffd93b-1bac-4306-9b44-c88141f79d3a.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995667624",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/09_f7ffd93b-1bac-4306-9b44-c88141f79d3a.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210509992",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/10_231d2367-8073-45f6-8752-f4c1900aad72.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995700392",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/10_231d2367-8073-45f6-8752-f4c1900aad72.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210542760",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/27_77586066-9e19-4d03-a90b-2d4302cc43df.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995733160",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/27_77586066-9e19-4d03-a90b-2d4302cc43df.jpg?v=1618052154"
+              }
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "EXTERNAL_VIDEO",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20802324234408",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/hqdefault_4a78d8ee-3a4c-448c-80ed-3f22cf0787a3.jpg?v=1618211530"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/ExternalVideo/20808112996520",
+              "embeddedUrl": "https://youtu.be/btFclZUXpzA"
+            }
+          },
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "IMAGE",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20784210608296",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/06_b23bea06-8d53-4eba-95ef-f33c3cc5ba25.jpg?v=1618052154"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/MediaImage/20789995798696",
+              "image": {
+                "altText": "",
+                "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/06_b23bea06-8d53-4eba-95ef-f33c3cc5ba25.jpg?v=1618052154"
+              }
+            }
+          },
+
+          {
+            "node": {
+              "alt": "",
+              "mediaContentType": "EXTERNAL_VIDEO",
+              "preview": {
+                "image": {
+                  "id": "gid://shopify/ImageSource/20802324234408",
+                  "altText": "",
+                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/hqdefault_4a78d8ee-3a4c-448c-80ed-3f22cf0787a3.jpg?v=1618211530"
+                }
+              },
+              "status": "READY",
+              "id": "gid://shopify/ExternalVideo/208081129965201",
+              "embeddedUrl": "https://youtu.be/btFclZUXpzA1"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {
+    "cost": {
+      "requestedQueryCost": 78,
+      "actualQueryCost": 50,
+      "throttleStatus": {
+        "maximumAvailable": 2000,
+        "currentlyAvailable": 1950,
+        "restoreRate": 100
+      }
+    }
+  }
+}

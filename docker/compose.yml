@@ -1,0 +1,32 @@
+services:
+  colby-server:
+    image: server
+    build: .
+    volumes:
+      - ./../src:/var/www/html/
+    ports:
+      - ${SERVER_PORT}:80
+
+  colby-db:
+    image: mariadb:11
+    healthcheck:
+      test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    environment:
+      - MARIADB_DATABASE=colby
+      - MARIADB_ROOT_PASSWORD=root
+    volumes:
+      - ./db.sql:/docker-entrypoint-initdb.d/init.sql
+
+  colby-pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: colby-pma
+    restart: unless-stopped
+    environment:
+      - PMA_HOST=colby-db
+      - UPLOAD_LIMIT=1G
+    ports:
+      - ${PMA_PORT}:80
