@@ -228,23 +228,6 @@
                 "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/06_b23bea06-8d53-4eba-95ef-f33c3cc5ba25.jpg?v=1618052154"
               }
             }
-          },
-
-          {
-            "node": {
-              "alt": "",
-              "mediaContentType": "EXTERNAL_VIDEO",
-              "preview": {
-                "image": {
-                  "id": "gid://shopify/ImageSource/20802324234408",
-                  "altText": "",
-                  "originalSrc": "https://cdn.shopify.com/s/files/1/0375/2886/2851/products/hqdefault_4a78d8ee-3a4c-448c-80ed-3f22cf0787a3.jpg?v=1618211530"
-                }
-              },
-              "status": "READY",
-              "id": "gid://shopify/ExternalVideo/208081129965201",
-              "embeddedUrl": "https://youtu.be/btFclZUXpzA1"
-            }
           }
         ]
       }
