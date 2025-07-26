@@ -80,9 +80,13 @@ try {
     if ($transactionStarted) {
         $conn->rollBack();
     }
-    error_log('[DB ERROR]: ' . $e->getMessage());
+    $msg = '[DB ERROR]: ' . $e->getMessage();
+    echo $msg;
+    error_log($msg);
 }
 catch (RuntimeException $e) {
-    error_log('[APP ERROR]: ' . $e->getMessage());
+    $msg = '[APP ERROR]: ' . $e->getMessage();
+    echo $msg;
+    error_log($msg);
 }
 $conn = null;
