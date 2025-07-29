@@ -50,7 +50,17 @@ foreach ($edges as $edge) {
     }
 }
 
-if (!empty($videos)) {
+if (empty($media) && empty($videos)) {
+    $msg = 'No data to process.';
+    echo $msg;
+    error_log($msg);
+    throw new RuntimeException($msg);
+}
+
+if (empty($media)) {
+    $media = $videos;
+}
+if (!empty($media) && !empty($videos)) {
     array_splice($media, 1, 0, $videos);
 }
 foreach ($media as $index => $item) {
@@ -61,7 +71,11 @@ $data = array_merge(...$media);
 // Insert in bulk
 $values = str_repeat('?,', count($media[0]) - 1) . '?';
 $preparedValues = implode(',', array_fill(0, count($media), "($values)"));
-$sql = "INSERT INTO " . DBMEDIATABLE . " (node_id, type, src, position) VALUES {$preparedValues}";
+$sql = "INSERT INTO " . DBMEDIATABLE . " (node_id, type, src, position) VALUES {$preparedValues} " .
+    "ON DUPLICATE KEY UPDATE " .
+    "type=VALUES(type), " .
+    "src=VALUES(src), " .
+    "position=VALUES(position)";
 $transactionStarted = false;
 try {
     $stmt = $conn->prepare($sql);
