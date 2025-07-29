@@ -3,6 +3,13 @@
 include_once 'constants.php';
 include_once 'MediaType.php';
 
+function handleError(string $msg, bool $throwException = true) {
+    echo $msg;
+    error_log($msg);
+    if ($throwException) throw new RuntimeException($msg);
+    else return;
+}
+
 $dsn     = 'mysql:host=' . DBHOST . ';dbname=' . DBNAME . ';charset=' . DBCHARSET;
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -17,12 +24,25 @@ try {
 
 $json = file_get_contents('data.json');
 $incomingApiData = json_decode($json, true);
+
+$productTitle = $incomingApiData['data']['product']['title'];
+if (empty($productTitle)) {
+    $msg = 'Product data is empty or missing.';
+    handleError($msg);
+}
+$productStmt = $conn->prepare("SELECT id FROM " . DBPRODUCTSTABLE . " WHERE title = ? LIMIT 1");
+$productStmt->execute([$productTitle]);
+$product = $productStmt->fetch();
+if (empty($product)) {
+    $msg = 'No product with given title in database.';
+    handleError($msg);
+}
+$productId = $product['id'];
+
 $edges = $incomingApiData['data']['product']['media']['edges'] ?? null;
 if (empty($edges)) {
     $msg = 'Api data is empty or missing.';
-    echo $msg;
-    error_log($msg);
-    throw new RuntimeException($msg);
+    handleError($msg);
 }
 
 $media = [];
@@ -42,20 +62,21 @@ foreach ($edges as $edge) {
     if ($mediaType === MediaType::EXTERNAL_VIDEO->value) {
         $src = $node['embeddedUrl'] ?? null;
         if (!$src) continue;
-        $videos[] = [$id, $mediaType, $src]; // Using flat array in order to spare loop later
+        $videos[] = [$id, $productId, $mediaType, $src]; // Using flat array in order to spare loop later
     } else {
         $src = $node['image']['originalSrc'] ?? null;
         if (!$src) continue;
-        $media[] = [$id, $mediaType, $src]; // Using flat array in order to spare loop later
+        $media[] = [$id, $productId, $mediaType, $src]; // Using flat array in order to spare loop later
     }
 }
 
 if (empty($media) && empty($videos)) {
     $msg = 'No data to process.';
-    echo $msg;
-    error_log($msg);
-    throw new RuntimeException($msg);
+    handleError($msg);
 }
+
+$deleteStms = $conn->prepare("DELETE FROM " . DBMEDIATABLE . " WHERE product_id = ?");
+$query = $deleteStms->execute([$productId]);
 
 if (empty($media)) {
     $media = $videos;
@@ -71,11 +92,7 @@ $data = array_merge(...$media);
 // Insert in bulk
 $values = str_repeat('?,', count($media[0]) - 1) . '?';
 $preparedValues = implode(',', array_fill(0, count($media), "($values)"));
-$sql = "INSERT INTO " . DBMEDIATABLE . " (node_id, type, src, position) VALUES {$preparedValues} " .
-    "ON DUPLICATE KEY UPDATE " .
-    "type=VALUES(type), " .
-    "src=VALUES(src), " .
-    "position=VALUES(position)";
+$sql = "INSERT INTO " . DBMEDIATABLE . " (node_id, product_id, type, src, position) VALUES {$preparedValues}";
 $transactionStarted = false;
 try {
     $stmt = $conn->prepare($sql);
@@ -87,20 +104,17 @@ try {
     } else {
         $conn->rollBack();
         $msg = 'Insert failed: could not insert data into ' . DBMEDIATABLE . '.';
-        error_log($msg);
-        throw new RuntimeException($msg);
+        handleError($msg);
     }
 } catch (PDOException $e) {
     if ($transactionStarted) {
         $conn->rollBack();
     }
     $msg = '[DB ERROR]: ' . $e->getMessage();
-    echo $msg;
-    error_log($msg);
+    handleError($msg, false);
 }
 catch (RuntimeException $e) {
     $msg = '[APP ERROR]: ' . $e->getMessage();
-    echo $msg;
-    error_log($msg);
+    handleError($msg, false);
 }
 $conn = null;

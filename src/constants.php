@@ -5,4 +5,5 @@ const DBNAME = 'colby';
 const DBCHARSET = 'utf8mb4';
 const DBUSERNAME = 'root';
 const DBPASSWORD = 'root';
+const DBPRODUCTSTABLE = 'products';
 const DBMEDIATABLE = 'media';
